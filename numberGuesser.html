@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Adivina el número</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="game-container">
+      <header>
+        <h1>Adivina el número!</h1>
+      </header>
+      
+      <div class="rounds">
+        <p class="round-label">Ronda <span id="round-number">1</span></p>
+        <p class="guess-label">Número objetivo: <span id="target-number">?</span></p>
+      </div>
+
+      <div class="guessing-area">
+        <div class="guess computer-guess">
+          <div class="guess-title">
+            <p class="guess-label">Ordenador</p>
+            <p class="score-label">Puntuación: <span id="computer-score">0</span></p>
+          </div>
+          <p id="computer-guess">?</p>
+          <p class="winning-text" id="computer-wins"></p>
+        </div>
+        <div class="guess human-guess">
+          <div class="guess-title">
+            <p class="guess-label">Tu</p>
+            <p class="score-label">Puntuación: <span id="human-score">0</span></p>
+          </div>
+          <input type="number" id="human-guess" min=0 max=9 value=0>
+          <div class="number-controls">
+            <button class="number-control left" id="subtract" disabled>-</button>
+            <button class="number-control right" id="add">+</button>
+          </div>
+          <button class="button" id="guess">Generar un número</button>
+        </div>
+      </div>
+
+      <div class="next-round-container">
+        <button class="button" id="next-round" disabled>Siguiente ronda</button>
+      </div>
+
+    </div>
+    
+    <div class="instructions">
+      <div class="instruction">
+        <h3>Paso 1</h3>
+        <p>Introducir un numero entre 0 y 9</p>
+      </div>
+      <div class="instruction">
+        <h3>Paso 2</h3>
+        <p>Clicar "Generar un número" para ver quién gana la ronda.</p>
+      </div>
+      <div class="instruction">
+        <h3>Paso 3</h3>
+        <p>Clicar "Siguiente Ronda" para volver a jugar de nuevo.</p>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="./game.js"></script>
+  </body>
+</html>
